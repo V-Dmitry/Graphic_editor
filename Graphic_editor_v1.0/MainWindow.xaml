@@ -1,0 +1,66 @@
+﻿<Window x:Name="MainForm" x:Class="Graphic_editor_v1._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Graphic_editor_v1._0"
+        mc:Ignorable="d"
+        Title="Graphic_editor" Height="609.208" Width="1072.17" Icon="gnPB-pX6ysI.ico" ResizeMode="CanMinimize" WindowStartupLocation="Manual">
+    <DockPanel x:Name="dockpanel" Height="577" VerticalAlignment="Top" Width="1055" ClipToBounds="True" HorizontalAlignment="Left">
+        <Canvas Panel.ZIndex="-1" x:Name="canvas" Width="818" MouseLeftButtonDown="canvas_MouseLeftButtonDown_1" MouseLeftButtonUp="canvas_MouseLeftButtonUp_1" Background="#FFE2FFF8" Height="568" VerticalAlignment="Top" MouseMove="canvas_MouseMove" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+        </Canvas>
+        <StackPanel Panel.ZIndex="0" Background="LightGray" Margin="0,0,0,10">
+            <Button x:Name="CursorBut" Content="Курсор" Height="28" VerticalAlignment="Top" DockPanel.Dock="Top" Click="CursorBut_Click"/>
+            <Button x:Name="GroupBut" Content="Группировка" Height="33" VerticalAlignment="Top" DockPanel.Dock="Top" Click="GroupBut_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="#FFDEDEDE"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MorfBut" Content="Морфинг" Height="31" VerticalAlignment="Top" DockPanel.Dock="Top" HorizontalAlignment="Left" Width="237" Click="MorfBut_Click"/>
+            <Slider x:Name="MorfSlider" Height="38.5" VerticalAlignment="Top" Width="232" Margin="2.5,5,2.5,0" UseLayoutRounding="False" ValueChanged="MorfSlider_ValueChanged" Maximum="1" TickPlacement="TopLeft"/>
+            <Label x:Name="label" Content="Толщина линии:" Height="31" VerticalAlignment="Top" DockPanel.Dock="Top"/>
+
+            <Slider x:Name="LineSlider" Minimum="2" Tag="" Margin="5,5,3,0" Height="35" VerticalAlignment="Top" DockPanel.Dock="Top" TickPlacement="TopLeft" Value="5"/>
+            <Label x:Name="label5" Content="Команды 2D графики:"/>
+            <StackPanel Height="76" Width="235" RenderTransformOrigin="0.494,0.357">
+                <StackPanel Height="70" VerticalAlignment="Top" Margin="0,0,203,0">
+                    <TextBox x:Name="t11" Height="23" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" TextAlignment="Center" TextChanged="t11_TextChanged"/>
+                    <TextBox x:Name="t21" Height="23" TextWrapping="Wrap" Text="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="32" TextAlignment="Center"/>
+                    <TextBox x:Name="t31" Height="23" TextWrapping="Wrap" Text="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="32" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="72" Margin="22,-73,154,-5" HorizontalAlignment="Center" Width="35" VerticalAlignment="Center">
+                    <TextBox x:Name="t12" Height="23" TextWrapping="Wrap" Text="0" TextAlignment="Center"/>
+                    <TextBox x:Name="t22" Height="23" TextWrapping="Wrap" Text="1" TextAlignment="Center"/>
+                    <TextBox x:Name="t32" Height="23" TextWrapping="Wrap" Text="0" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="70" Margin="70,-73,131,-3">
+                    <TextBox x:Name="t13" Height="23" TextWrapping="Wrap" Text="0" TextAlignment="Center"/>
+                    <TextBox x:Name="t23" Height="23" TextWrapping="Wrap" Text="0" TextAlignment="Center"/>
+                    <TextBox x:Name="t33" Height="23" TextWrapping="Wrap" Text="1" TextAlignment="Center"/>
+                </StackPanel>
+                <Button x:Name="_2dComandBut" Content="Выполнить" Margin="106,-70,0,1" Click="_2dComandBut_Click"/>
+            </StackPanel>
+            <Button x:Name="FractalBut" Content="Дерево" Width="237" Height="27" HorizontalAlignment="Left" VerticalAlignment="Top" Click="FractalBut_Click"/>
+            <Button x:Name="ClearCanvas" Content="Очистить поле" Height="25" Margin="0,0,0,10" VerticalAlignment="Bottom" Click="ClearCanvas_Click" RenderTransformOrigin="0.527,0.397"/>
+            <Label x:Name="label6" Content="Номер листа:"/>
+            <TextBox x:Name="ListNumBox" Height="23" TextWrapping="Wrap" Text="0" Width="28" IsReadOnlyCaretVisible="True" FontWeight="Bold" FontSize="14" TextAlignment="Center" IsEnabled="False" Margin="0,2,0,0"/>
+            <Button x:Name="SaveListBut" Content="Сохранить" Width="116" Margin="-122,-38,0,-28" VerticalAlignment="Bottom" Click="SaveListBut_Click"/>
+            <Button x:Name="LoadListBut" Content="Загрузить" Width="117" Margin="117,0,0,-28" VerticalAlignment="Bottom" Click="LoadListBut_Click"/>
+            <Button x:Name="PrevListBut" Content="Назад" Width="100" HorizontalAlignment="Left" Margin="0,-23,0,0" Click="PrevListBut_Click"/>
+            <Button x:Name="NextListBut" Content="Вперед" Width="101" Margin="0,-23,-135,0" Click="NextListBut_Click"/>
+            <Label x:Name="label3" Content="Cursor X:" Width="64" HorizontalAlignment="Left" Margin="0,39,0,-4"/>
+            <Label x:Name="label1" Content="0" Width="132" Height="25" HorizontalAlignment="Center" Margin="-16,-23,-45,0"/>
+            <Label x:Name="label4" Content="Cursor Y:" Height="26"/>
+            <Label x:Name="label2" Content="0" Width="104" Margin="0,-26,-1,0"/>
+        </StackPanel>
+
+    </DockPanel>
+</Window>

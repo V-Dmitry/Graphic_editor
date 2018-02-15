@@ -1,0 +1,9 @@
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\bin\Debug\Graphic_editor.exe.config
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\bin\Debug\Graphic_editor.exe
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\bin\Debug\Graphic_editor.pdb
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\obj\Debug\Graphic_editor.csprojResolveAssemblyReference.cache
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\obj\Debug\Graphic_editor.Editor.resources
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\obj\Debug\Graphic_editor.Properties.Resources.resources
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\obj\Debug\Graphic_editor.csproj.GenerateResource.Cache
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\obj\Debug\Graphic_editor.exe
+c:\users\1\documents\visual studio 2015\Projects\Graphic_editor\Graphic_editor\obj\Debug\Graphic_editor.pdb
